@@ -39,10 +39,10 @@ Service: http://your-ip-address:8080
 ```http
   POST /predict
 ```
-
-| Parameter | Type     | Description                |
+Content-Type: multipart/form-data
+| Name | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `image` | `image` | **Required** |
+| `image` | `file` | **Required** MIME types |
 
 
   
