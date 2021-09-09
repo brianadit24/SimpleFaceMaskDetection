@@ -1,11 +1,12 @@
-FROM python:3.7-slim
+FROM python:3.8-slim-buster
 
 WORKDIR /app
-COPY requirement.txt .
 
-RUN pip install -r requirement.txt
 RUN apt-get update
 RUN apt-get install ffmpeg libsm6 libxext6 -y
+
+COPY requirement.txt .
+RUN pip install -r requirement.txt
 
 COPY . .
 
