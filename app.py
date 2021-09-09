@@ -1,3 +1,4 @@
+import os
 from datetime import datetime
 from flask import Flask, send_file, request
 from model import detect_face_mask
@@ -10,7 +11,8 @@ def predict():
     current_time = datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
     filename = current_time + '-' + file.filename
     detect_face_mask(filename, file)
-    return send_file(filename, mimetype='image/{}'.format(filename.split('.')[-1]))
+    return (send_file(filename, mimetype='image/{}'.format(filename.split('.')[-1])),
+            os.remove(filename))
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="8080")
