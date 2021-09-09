@@ -9,5 +9,6 @@ RUN apt-get install ffmpeg libsm6 libxext6 -y
 
 COPY . .
 
-CMD [ "python3", "app.py" ]
 EXPOSE 8080
+
+CMD [ "python3", "app.py" ]
