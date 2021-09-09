@@ -21,6 +21,6 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag brianadit24/simplefacemask-api:$(date +%s)
+      run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/simplefacemask-api:$(date +%s)
     - name: Push Image to Dockerhub
-      run: docker push brianadit24/simplefacemask-api
+      run: docker push ${{secrets.DOCKER_USER}}/simplefacemask-api
