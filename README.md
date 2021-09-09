@@ -45,6 +45,21 @@ Content-Type: multipart/form-data
 | `image` | `file` | **Required** MIME types |
 
 
+## Result Example
+
+**Before:**<br>
+![Mask](results/mask.jpg)
+
+**After:**<br>
+![Result_Mask](results/result_mask.jpg)
+
+---
+
+**Before:**<br>
+![NoMask](results/no_mask.jpg)
+
+**After:**<br>
+![Result_NoMask](results/no_mask_result.jpg) 
   
 ## Feedback
 
