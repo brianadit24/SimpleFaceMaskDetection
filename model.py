@@ -2,8 +2,8 @@ import cv2
 import numpy
 
 # Initial Haarcascade
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-mouth_cascade = cv2.CascadeClassifier('haarcascade_mcs_mouth.xml')
+face_cascade = cv2.CascadeClassifier('model/haarcascade_frontalface_default.xml')
+mouth_cascade = cv2.CascadeClassifier('model/haarcascade_mcs_mouth.xml')
 
 def detect_face_mask(namefile, file):
     
