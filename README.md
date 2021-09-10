@@ -40,25 +40,25 @@ Service: http://your-ip-address:8080
   POST /predict
 ```
 Content-Type: multipart/form-data
-| Name | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `image` | `file` | **Required** MIME types |
+| Name    | Type   | Description                                         |
+| :------ | :----- | :-------------------------------------------------- |
+| `image` | `file` | **Required**. `image/jpeg` or `image/png` MIME Type |
 
 
 ## Result Example
 
-**Before:**<br>
+**Input:**<br>
 ![Mask](results/mask.jpg)
 
-**After:**<br>
+**Output:**<br>
 ![Result_Mask](results/result_mask.jpg)
 
 ---
 
-**Before:**<br>
+**Input:**<br>
 ![NoMask](results/no_mask.jpg)
 
-**After:**<br>
+**Output:**<br>
 ![Result_NoMask](results/no_mask_result.jpg) 
   
 ## Feedback
